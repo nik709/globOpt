@@ -1,5 +1,10 @@
 /target
 /.idea
 /*.iml
+/.DS_Store
+src/.DS_Store
+src/main/java/.DS_Store
+src/main/java/com/grechukhin/.DS_Store
 /src/main/resources
-/scr/main/java/com/grechukhin/UI
+/src/main/java/com/grechukhin/UI
+/src/main/java/com/grechukhin/OperationExecutor.java
