@@ -25,7 +25,7 @@ public class TestBustMethod {
 
     @Test
     public void canCallOnEasySin() {
-        Assert.assertEquals(-1, callWithFunc(mEasySin), mResEpsilon);
+        Assert.assertEquals(-0.84, callWithFunc(mEasySin), mResEpsilon);
     }
 
     private double callWithFunc(String func) {
