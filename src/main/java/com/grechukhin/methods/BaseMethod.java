@@ -40,7 +40,7 @@ public abstract class BaseMethod {
             return;
         }
 
-        TrialInterface trial = (TrialInterface) ModelFactory.createModel(TrialInterface.class);
+        TrialInterface trial = (TrialInterface) ModelFactory.getInstance().createModel(TrialInterface.class);
         if (trial != null) {
             trial.setData(x, mFunction.calculate(x));
             mTrials.add(trial);
@@ -109,6 +109,18 @@ public abstract class BaseMethod {
         return mTrials.get(minT);
     }
 
+    protected double M() {
+        double M = 0.0;
+        for (int i = 1; i < getTrials().size(); ++i) {
+            double tempM =
+                    Math.abs(getTrials().get(i).getY() - getTrials().get(i - 1).getY())
+                            / (getTrials().get(i).getX() - getTrials().get(i - 1).getX());
+            if (tempM > M) {
+                M = tempM;
+            }
+        }
+        return M;
+    }
 
 
     public abstract BaseMethod call();

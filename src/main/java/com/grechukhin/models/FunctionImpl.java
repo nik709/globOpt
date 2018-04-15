@@ -53,7 +53,7 @@ public class FunctionImpl implements FunctionInterface {
         double result = OperationExecutor.eval(f);
 
         for (FunctionListener listener : listeners) {
-            listener.onFinishCalculation(result);
+            listener.onFinishCalculation(x, result);
         }
         return result;
     }

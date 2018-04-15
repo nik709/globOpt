@@ -13,7 +13,7 @@ public interface FunctionInterface extends BaseModel {
 
     interface FunctionListener extends BaseListener {
         void onFunctionChanged();
-        void onFinishCalculation(double value);
+        void onFinishCalculation(double x, double y);
         void onFinishCalculationAll(Map<Double, Double> values);
     }
 
