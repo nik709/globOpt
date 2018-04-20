@@ -4,10 +4,7 @@ import com.grechukhin.models.FunctionInterface;
 import com.grechukhin.models.ModelFactory;
 import com.grechukhin.models.TrialInterface;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public abstract class BaseMethod {
 
@@ -124,6 +121,7 @@ public abstract class BaseMethod {
 
 
     public abstract BaseMethod call();
+    public abstract Map<String, Object> getParams();
     protected abstract int recalculateCharacteristic();
 
 }

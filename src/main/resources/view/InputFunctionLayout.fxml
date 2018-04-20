@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane fx:id="pane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.grechukhin.UI.InputFunctionLayoutController">
+   <children>
+      <TextField fx:id="function" layoutX="14.0" layoutY="30.0" prefHeight="27.0" prefWidth="241.0" />
+      <Button layoutX="14.0" layoutY="57.0" mnemonicParsing="false" text="sin" />
+      <Button layoutX="50.0" layoutY="57.0" mnemonicParsing="false" text="cos" />
+      <Button layoutX="90.0" layoutY="57.0" mnemonicParsing="false" text="exp" />
+      <Button layoutX="14.0" layoutY="84.0" prefHeight="27.0" prefWidth="36.0" text="(" />
+      <Button layoutX="90.0" layoutY="84.0" prefHeight="27.0" prefWidth="40.0" text=")" />
+      <Button layoutX="14.0" layoutY="165.0" mnemonicParsing="false" onAction="#onOK" prefHeight="27.0" prefWidth="241.0" text="OK" />
+      <Button layoutX="50.0" layoutY="84.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="x" />
+      <Button layoutX="14.0" layoutY="111.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="36.0" text="*" />
+      <Button layoutX="50.0" layoutY="111.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="/" />
+      <Button layoutX="90.0" layoutY="111.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="+" />
+      <Button layoutX="14.0" layoutY="138.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="36.0" text="-" />
+      <Button layoutX="50.0" layoutY="138.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="√" />
+      <Button layoutX="90.0" layoutY="138.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="." />
+      <Button layoutX="135.0" layoutY="57.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="7" />
+      <Button layoutX="175.0" layoutY="57.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="8" />
+      <Button layoutX="215.0" layoutY="57.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="9" />
+      <Button layoutX="135.0" layoutY="84.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="4" />
+      <Button layoutX="175.0" layoutY="84.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="5" />
+      <Button layoutX="215.0" layoutY="84.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="6" />
+      <Button layoutX="135.0" layoutY="111.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="1" />
+      <Button layoutX="175.0" layoutY="111.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="2" />
+      <Button layoutX="215.0" layoutY="111.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="40.0" text="3" />
+      <Button layoutX="135.0" layoutY="138.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="120.0" text="0" />
+   </children>
+</Pane>

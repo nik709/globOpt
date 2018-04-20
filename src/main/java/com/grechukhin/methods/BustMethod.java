@@ -1,6 +1,8 @@
 package com.grechukhin.methods;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public final class BustMethod extends BaseMethod {
 
@@ -51,5 +53,15 @@ public final class BustMethod extends BaseMethod {
             characteristics.add(characteristic);
         }
         return t;
+    }
+
+    @Override
+    public Map<String, Object> getParams() {
+        return new HashMap<String, Object>() {{
+            put("a", mA);
+            put("b", mB);
+            put("source", mSource);
+            put("epsilon", getEpsilon());
+        }};
     }
 }

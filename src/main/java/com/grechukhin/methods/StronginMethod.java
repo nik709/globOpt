@@ -1,5 +1,8 @@
 package com.grechukhin.methods;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class StronginMethod extends BaseMethod {
 
     private int mSource;
@@ -45,7 +48,7 @@ public class StronginMethod extends BaseMethod {
             double deltaZ = getTrials().get(i).getY() - getTrials().get(i - 1).getY();
             double m = M > 0 ? mR*M : 1;
             double characteristic =
-                    m * deltaX - deltaZ * deltaZ / m * deltaX
+                    m * deltaX + (deltaZ * deltaZ) / (m * deltaX)
                             - 2 * (getTrials().get(i).getY() + getTrials().get(i - 1).getY());
             if (characteristic > maxR) {
                 t = i;
@@ -60,5 +63,16 @@ public class StronginMethod extends BaseMethod {
         makeTrial(mA);
         makeTrial(mB);
         makeTrial(.5 * (mB + mA));
+    }
+
+    @Override
+    public Map<String, Object> getParams() {
+        return new HashMap<String, Object>() {{
+            put("a", mA);
+            put("b", mB);
+            put("source", mSource);
+            put("epsilon", getEpsilon());
+            put("r", mR);
+        }};
     }
 }

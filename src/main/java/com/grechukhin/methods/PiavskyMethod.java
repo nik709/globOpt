@@ -1,5 +1,8 @@
 package com.grechukhin.methods;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class PiavskyMethod extends BaseMethod {
 
     private int mSource;
@@ -61,5 +64,16 @@ public class PiavskyMethod extends BaseMethod {
         double M = M();
         return .5 * (getTrials().get(t).getX() + getTrials().get(t - 1).getX())
                 - (getTrials().get(t).getY() - getTrials().get(t - 1).getY()) / (2 * (M > 0 ? mR*M : 1));
+    }
+
+    @Override
+    public Map<String, Object> getParams() {
+        return new HashMap<String, Object>() {{
+            put("a", mA);
+            put("b", mB);
+            put("source", mSource);
+            put("epsilon", getEpsilon());
+            put("R", mR);
+        }};
     }
 }

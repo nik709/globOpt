@@ -1,6 +1,5 @@
 package com.grechukhin.models;
 
-import java.util.List;
 import java.util.Map;
 
 public interface FunctionInterface extends BaseModel {
@@ -17,6 +16,9 @@ public interface FunctionInterface extends BaseModel {
         void onFinishCalculationAll(Map<Double, Double> values);
     }
 
-    Double defaultLeftX = 0d;
-    Double defaultRight = 1d;
+    Double defaultLeftX = -3d;
+    Double defaultRight = 3d;
+    Double defaultEpsilon = 0.01;
+    Double defaultR = 2d;
+    Integer defaultSource = 500;
 }

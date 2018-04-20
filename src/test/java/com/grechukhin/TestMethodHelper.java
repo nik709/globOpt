@@ -20,6 +20,7 @@ public class TestMethodHelper {
 
     public static final String sEasyParabola = "x*x";
     public static final String sEasySin = "sin(x)";
+    public static final String sHardTrigFunc = "5*sin(3*x)+4*cos(7*x)";
 
     public static double callWithFunc(String func, BaseMethod method) {
         FunctionInterface function = (FunctionInterface) ModelFactory.getInstance().createModel(FunctionInterface.class);

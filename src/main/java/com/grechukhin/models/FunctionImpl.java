@@ -47,8 +47,13 @@ public class FunctionImpl implements FunctionInterface {
     @Override
     public double calculate(double x) {
         String f = function
-                .replaceAll("x", String.valueOf(x))
                 .replaceAll("√", "sqrt");
+
+        if (-1E-4 < x && x < 1E-4) {
+            f = f.replaceAll("x", "0");
+        } else {
+            f = f.replaceAll("x", String.valueOf(x));
+        }
 
         double result = OperationExecutor.eval(f);
 
@@ -63,8 +68,12 @@ public class FunctionImpl implements FunctionInterface {
         Map<Double, Double> result = new TreeMap<>();
         for (double x = interval.leftX; x < interval.rightX; x+=step) {
             String f = function
-                    .replaceAll("x", String.valueOf(x))
                     .replaceAll("√", "sqrt");
+            if (-1E-4 < x && x < 1E-4) {
+                f = f.replaceAll("x", "0");
+            } else {
+                f = f.replaceAll("x", String.valueOf(x));
+            }
             result.put(x, OperationExecutor.eval(f));
         }
 
